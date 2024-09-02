@@ -80,6 +80,7 @@ print(f"Maior faturamento diário: {maior}")
 print(f"Número de dias com faturamento acima da média: {acima_media}\n")
 
 
+#DESAFIO 4
 """4) Dado o valor de faturamento mensal de uma distribuidora, detalhado por estado:
 • SP – R$67.836,43
 • RJ – R$36.678,66
@@ -107,6 +108,7 @@ for estado, valor in faturamento_por_estado.items():
   print(f"\nDesafio 4: \n{estado}: {porcentagem:.2f}% do faturamento total")
 
 
+#DESAFIO 5
 """5) Escreva um programa que inverta os caracteres de um string.
 
 IMPORTANTE:
