@@ -104,7 +104,14 @@ porcentagens = {}
 for estado, valor in faturamento_por_estado.items():
   porcentagem = (valor / total) * 100
   porcentagens[estado] = porcentagem
-  print(f"\n{estado}: {porcentagem:.2f}% do faturamento total")
+  print(f"\nDesafio 4: \n{estado}: {porcentagem:.2f}% do faturamento total")
+
+
+"""5) Escreva um programa que inverta os caracteres de um string.
+
+IMPORTANTE:
+a) Essa string pode ser informada através de qualquer entrada de sua preferência ou pode ser previamente definida no código;
+b) Evite usar funções prontas, como, por exemplo, reverse;"""
 
 def inverter(lista):
   esquerda = 0
@@ -119,5 +126,5 @@ def inverter(lista):
 
   print(f"A palavra intertida fica: {palavra_invertida}")
 
-palavra = str(input("Digite a palavra que você deseja inverter: "))
+palavra = str(input("\nDesafio 5:\nDigite a palavra que você deseja inverter: "))
 inverter(list(palavra))
