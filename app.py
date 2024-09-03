@@ -13,7 +13,7 @@ k = 0
 while k < indice:
   k += 1
   soma = soma + k
-print(f"Desafio 1: {soma}\n")
+print(f"\n\nDesafio 1: {soma}\n")
 
 
 #DESAFIO 2
@@ -56,13 +56,11 @@ IMPORTANTE:
 a) Usar o json ou xml disponível como fonte dos dados do faturamento mensal;
 b) Podem existir dias sem faturamento, como nos finais de semana e feriados. Estes dias devem ser ignorados no cálculo da média;"""
 
-## NÃO ENCONTREI O ARQUIVO JSON QUE O ITEM A) FALTA, POR ISSO CRIEI EU MESMO UM ARQUIVO JSON COM UM FATURAMENTO SEMANAL PARA TESTAR O CÓDIGO
-
-with open('desafio3.json', 'r') as file:
+with open('dados.json', 'r') as file:
   dados = json.load(file)
 
 def calculo(dados):
-  faturamento = [dia['faturamento'] for dia in dados if dia['faturamento'] > 0]
+  faturamento = [dia['valor'] for dia in dados if dia['valor'] > 0]
 
   menor = min(faturamento)
   maior = max(faturamento)
@@ -102,10 +100,11 @@ faturamento_por_estado = {
 total = sum(faturamento_por_estado.values())
 
 porcentagens = {}
+print("\nDesafio 4:")
 for estado, valor in faturamento_por_estado.items():
   porcentagem = (valor / total) * 100
   porcentagens[estado] = porcentagem
-  print(f"\nDesafio 4: \n{estado}: {porcentagem:.2f}% do faturamento total")
+  print(f"{estado}: {porcentagem:.2f}% do faturamento total")
 
 
 #DESAFIO 5
@@ -128,5 +127,5 @@ def inverter(lista):
 
   print(f"A palavra intertida fica: {palavra_invertida}")
 
-palavra = str(input("\nDesafio 5:\nDigite a palavra que você deseja inverter: "))
+palavra = str(input("\n\nDesafio 5:\nDigite a palavra que você deseja inverter: "))
 inverter(list(palavra))
